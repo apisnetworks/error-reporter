@@ -8,7 +8,7 @@
 	 *
 	 * @author  Matt Saladna <matt@apisnetworks.com>
 	 * @license http://opensource.org/licenses/MIT
-	 * @version 1.9r1740 2015-04-29
+	 * @version 1.9r1741 2015-06-06
 	 */
 
 	class Error_Reporter
@@ -59,8 +59,9 @@
 			if (isset($inited)) {
 				return true;
 			}
-			if (!isset(self::$error_severity))
-				return self::init_ring();
+			if (!isset(self::$error_severity)) {
+				self::init_ring();
+			}
 			set_error_handler(__CLASS__ . '::handle_error', E_ALL);
 			set_exception_handler(__CLASS__ . '::handle_exception');
 			$inited = true;
