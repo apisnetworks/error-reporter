@@ -14,9 +14,9 @@ Error Reporter ("ER") evolved from [apnscp](http://apisnetworks.com/apnscp), a h
 <?php
 	include("Error_Reporter.php");	
 	// error()/warn()/info()/deprecated() macros	
-	include("Error_Reporter/wrapper.php");
+	include("misc/wrapper.php");
 	// compatibility stub for non-apnscp applications
-	include("Error_Reporter/stub.php");
+	include("misc/stub.php");
 	
 	
 	function test_error()

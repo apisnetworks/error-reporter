@@ -5,9 +5,9 @@
 	define('DEBUG', 1);
 	include("Error_Reporter.php");
 	// error()/warn()/info()/deprecated() macros	
-	include("Error_Reporter/wrapper.php");
+	include("misc/wrapper.php");
 	// compatibility stub for non-apnscp applications
-	include("Error_Reporter/stub.php");
+	include("misc/stub.php");
 
 
 	warn("Application error, msg: %s at %d",
